@@ -23,20 +23,20 @@ header{
       
   }
 
-  .movie-menu, .movie-details{
+  .movie-titles, .movie-details{
     display: flex 1;
-    padding-bottom: 20px;
+    padding: 50px;
     color: beige;
   }
   .movie-poster {
-    width: 500px; 
-    height: 300px; 
+    max-width: 100%;
+    width: 250px; 
     border-radius: 20px;
+  
 }
 
 .movie-description{
   align-self: center;
-  
 }
 
 

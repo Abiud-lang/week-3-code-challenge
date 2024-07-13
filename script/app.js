@@ -28,13 +28,18 @@ function listen(element, event, callback) {
 function addAttribute(element,attribute, content) {
  return element.setAttribute(attribute, content)   
 }
+listen(document, 'DOMContentLoaded', () => {
+    MoviesTitle(url);
+    MovieDetails(1);
+});
+
 
 function MoviesTitle() {
     fetch(url)
         .then(response => response.json())
         .then(movies => {
             const movieList = select(".films");
-            movies.forEach(movie => {
+            movies.map(movie => {
                 const series = createAnElement("li");
                 addText(series, movie.title);
                 listen(series, "click", () => MovieDetails(movie.id));
@@ -68,5 +73,5 @@ function MovieDetails(movieId) {
         }
     )}
 
-            MoviesTitle();
-            MovieDetails(1);
+            
+           
