@@ -4,22 +4,38 @@
     font-weight: 100;
     font-style: normal;
   }
+body{
+  background-color: aqua;
+}
+header{
+  text-align: center;
+  background-color: wheat;
+ 
+}
+
   main {
       display: flex;
-      padding: 20px;
+      padding: 18px;
       justify-content: space-evenly;
+      background: fixed;
+      
   }
 
   .movie-menu, .movie-details{
     display: flex 1;
+    padding-bottom: 20px;
   }
   .movie-poster {
     width: 400px; 
-    height: 400px; 
+    height: 300px; 
 }
 
 .films{
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
+  list-style: none;
+  color: rgb(5, 5, 5);
+  
+  
   
 }
