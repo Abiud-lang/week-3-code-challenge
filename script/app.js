@@ -43,4 +43,8 @@ function MovieDetails(movieId) {
         });
 }
 
+function buyTickets() {
+    
+}
+
 
