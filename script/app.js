@@ -1,13 +1,12 @@
 const url = 'http://localhost:3000/films'
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetchMovies();
-    fetchMovieDetails(1);
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+    MoviesTitle();
+    MovieDetails(1);
 });
 
-function fetchMovies() {
+function MoviesTitle() {
     fetch(url)
         .then(response => response.json())
         .then(movies => {
@@ -15,33 +14,33 @@ function fetchMovies() {
             movies.forEach(movie => {
                 const series = document.createElement("li");
                 series.textContent = movie.title;
+                series.addEventListener("click", () => MovieDetails(movie.id));
                 movieList.appendChild(series);
+            
+               
             });
         });
 }
 
-function fetchMovieDetails(movieId) {
-    fetch(`http://localhost:3000/films/${movieId}`)
+function MovieDetails(movieId) {
+    fetch(`${url}/${movieId}`)
         .then(response => response.json())
         .then(movie => {
-            const filmImage = document.querySelector("poster")
-            filmImage.src = item.poster
-            const filmTitle = document.querySelector("filmTitle")
-            filmTitle.innerText = item.title
-            const runTime = document.querySelector("runtime")
-            runTime.innerHTML =`Runtime:<span>${item.runtime}</span>`
-            const showTime = document.querySelector("showtime")
-            showTime.innerText =`Showtime: ${item.showtime}`
-            const availTickets =document.querySelector("ticketsAvailable")
-            availTickets.innerText =`Tickets available: (${item.capacity - item.tickets_sold})`
+            const moviePoster = document.querySelector(".movie-poster")
+            moviePoster.src = movie.poster
 
-            MovieDetails()
+            const filmTitle = document.querySelector(".movie-title")
+            filmTitle.textContent = movie.title
 
+            const runTime = document.querySelector(".movie-runtime")
+            runTime.textContent = `Runtime: ${movie.runtime} minutes`
 
-
-
+            const showTime = document.querySelector(".movie-showtime")
+            showTime.textContent = `Showtime: ${movie.showtime}`
             
-
+            const availTickets = document.querySelector(".movie-available-tickets")
+            availTickets.textContent = `Available Tickets: ${movie.capacity - movie.tickets_sold}`
         });
 }
+
 
