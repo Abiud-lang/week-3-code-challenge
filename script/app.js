@@ -29,6 +29,9 @@ function MovieDetails(movieId) {
             const moviePoster = document.querySelector(".movie-poster")
             moviePoster.src = movie.poster
 
+            const filmDes = document.querySelector(".movie-description")
+            filmDes.textContent = movie.description
+
             const filmTitle = document.querySelector(".movie-title")
             filmTitle.textContent = movie.title
 
@@ -43,8 +46,15 @@ function MovieDetails(movieId) {
         });
 }
 
-function buyTickets() {
-    
-}
+const buyButton = document.querySelector(".buy-ticket");
+buyButton.disabled = (movie.capacity - movie.tickets_sold) === 0;
+buyButton.onclick = () => {
+    if (movie.tickets_sold < movie.capacity) {
+        movie.tickets_sold++;
+        availTickets.textContent = `Available Tickets: ${movie.capacity - movie.tickets_sold}`;
+        buyButton.disabled = (movie.capacity - movie.tickets_sold) === 0;
+    }
+};
+
 
 

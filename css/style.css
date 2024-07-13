@@ -34,6 +34,11 @@ header{
     border-radius: 20px;
 }
 
+.movie-description{
+  align-self: center;
+  
+}
+
 
 .h2{
   text-align: center;
