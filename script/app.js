@@ -73,17 +73,15 @@ function MovieDetails(movieId) {
         }
     )}
 
-
-    buyTicket.listen('click', function(){
-        const remTickets = select('.buy-ticket')
-        .addText()
-        
-        if(remTickets > 0){
+    const buyTicket = select('.buy-ticket')
+    buyTicket.listen('click', function(e){
+        if(availTickets > 0){
             select('.movie-available-tickets')
-            .addText  (remTickets-1)
+           buyTicket.addText  = availTickets-1
         }
-        else if((remTickets === 0)){
-            buyTicket.addText ( 'Sold Out')
+        else if((availTickets === 0)){
+            buyTicket.addText = 'Sold Out'
+            
         }
 })
     
