@@ -72,6 +72,10 @@ function MovieDetails(movieId) {
 
         }
     )}
+
+    function buyTicket() {
+      
+    }
     
 
             

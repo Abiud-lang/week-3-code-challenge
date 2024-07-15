@@ -10,19 +10,14 @@ Flatdango is a web application that allows users to purchase movie tickets from 
 - View a list of all movies
 - View details of the first movie on page load
 - Click on a movie title to view its details
-- Purchase tickets for a movie
 - Display the number of available tickets
-- Indicate when a movie is sold out
+
 
 ## Technology used:
 - HTML
 - CSS
 - JAVASCRIPT
 
-## Requirements
-
-- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager)
-- [json-server](https://github.com/typicode/json-server)
 
 
 ## Usage
@@ -50,4 +45,7 @@ Contributions are welcome! Please follow these steps to contribute:
 - Submit a pull request.
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Author
+ Abiud Kiprotich.
 
