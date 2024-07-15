@@ -72,6 +72,7 @@ function MovieDetails(movieId) {
 
         }
     )}
+    
 
             
            
