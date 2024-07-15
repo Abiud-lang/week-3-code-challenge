@@ -82,7 +82,7 @@ function MovieDetails(movieId) {
             select('.movie-available-tickets')
             .addText  (remTickets-1)
         }
-        else if((remTickets === 0)){
+        else ((remTickets === 0)){
             buyTicket.addText ('Sold Out')
         }
 })
