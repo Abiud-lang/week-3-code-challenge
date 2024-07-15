@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/films'
+const url = 'https://week-3-challenge-sigma.vercel.app/films'
 
 function createAnElement(element){
     return document.createElement(element)
