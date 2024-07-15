@@ -75,15 +75,15 @@ function MovieDetails(movieId) {
 
 
     buyTicket.listen('click', function(){
-        let remTickets = select('.buy-ticket')
+        const remTickets = select('.buy-ticket')
         .addText()
         
         if(remTickets > 0){
             select('.movie-available-tickets')
             .addText  (remTickets-1)
         }
-        else ((remTickets === 0)){
-            buyTicket.addText ('Sold Out')
+        else if((remTickets === 0)){
+            buyTicket.addText ( 'Sold Out')
         }
 })
     
