@@ -73,9 +73,19 @@ function MovieDetails(movieId) {
         }
     )}
 
-    function buyTicket() {
-      
-    }
+
+    buyTicket.listen('click', function(){
+        let remTickets = select('.buy-ticket')
+        .addText()
+        
+        if(remTickets > 0){
+            select('.movie-available-tickets')
+            .addText  (remTickets-1)
+        }
+        else if((remTickets === 0)){
+            buyTicket.addText ('Sold Out')
+        }
+})
     
 
             

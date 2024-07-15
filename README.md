@@ -18,6 +18,9 @@ Flatdango is a web application that allows users to purchase movie tickets from 
 - CSS
 - JAVASCRIPT
 
+## Live link
+https://week-3-code-challenge-eosin.vercel.app/
+
 
 
 ## Usage
